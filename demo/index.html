@@ -8,6 +8,7 @@
 </head>
 
 <body style="position: relative;">
+
   <style>
     .popover {
       max-width: 100%;
@@ -15,6 +16,7 @@
       box-shadow: 0 2px 8px 4px rgba(0, 0, 0, 0.05);
     }
   </style>
+
   <div id="targets" style="display: flex; flex-direction: row;">
     <div id="target-1">Popover 1</div>
     <div id="target-2">Popover 2</div>
@@ -26,7 +28,7 @@
   </div>
 
 
-  <div id="templates" style="display: none;">
+  <div id="contents" style="display: none;">
     <div id="content-1">
       <p>Hello from content 1</p>
     </div>
@@ -55,10 +57,10 @@
   <script type="text/javascript">
     window.onload = function () {
       const targets = document.querySelector('#targets').children;
-      const templates = document.querySelector('#templates').children;
+      const contents = document.querySelector('#contents').children;
 
       for (let i = 0; i < targets.length; i++) {
-        new Popover(targets[i], templates[i]);
+        new Popover(targets[i], contents[i]);
       }
     };
   </script>
