@@ -1,4 +1,4 @@
-# popover
+# :speech_balloon: popover
 
 Create hover popups from HTML elements.
 
