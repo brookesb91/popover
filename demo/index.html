@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Popover Demo</title>
+</head>
+
+<body style="position: relative;">
+  <style>
+    .popover {
+      max-width: 100%;
+      background: #ffffff;
+      box-shadow: 0 2px 8px 4px rgba(0, 0, 0, 0.05);
+    }
+  </style>
+  <div id="targets" style="display: flex; flex-direction: row;">
+    <div id="target-1">Popover 1</div>
+    <div id="target-2">Popover 2</div>
+    <div id="target-3">Popover 3</div>
+    <div id="target-4">Popover 4</div>
+    <div id="target-5">Popover 5</div>
+    <div id="target-6">Popover 6</div>
+    <div id="target-7">Popover 7</div>
+  </div>
+
+
+  <div id="templates" style="display: none;">
+    <div id="content-1">
+      <p>Hello from content 1</p>
+    </div>
+    <div id="content-2">
+      <p>Hello from content 2</p>
+    </div>
+    <div id="content-3">
+      <p>Hello from content 3</p>
+    </div>
+    <div id="content-4">
+      <p>Hello from content 4</p>
+    </div>
+    <div id="content-5">
+      <p>Hello from content 5</p>
+    </div>
+    <div id="content-6">
+      <p>Hello from content 6</p>
+    </div>
+    <div id="content-7">
+      <p>Hello from content 7</p>
+      <p>This content is slightly wider, but fear not as it'll all stay within the viewport and the maximum width of
+        this element is constrained.</p>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    window.onload = function () {
+      const targets = document.querySelector('#targets').children;
+      const templates = document.querySelector('#templates').children;
+
+      for (let i = 0; i < targets.length; i++) {
+        new Popover(targets[i], templates[i]);
+      }
+    };
+  </script>
+
+  <script src="../src/popover.js"></script>
+</body>
+
+</html>
