@@ -10,6 +10,10 @@
 <body style="position: relative;">
 
   <style>
+    #targets>* {
+      cursor: pointer;
+    }
+
     .popover {
       max-width: 100%;
       background: #ffffff;
@@ -17,7 +21,7 @@
     }
   </style>
 
-  <div id="targets" style="display: flex; flex-direction: row;">
+  <div id="targets" style="display: flex; flex-direction: row; justify-content:space-evenly; align-items: flex-start;">
     <div id="target-1">Popover 1</div>
     <div id="target-2">Popover 2</div>
     <div id="target-3">Popover 3</div>
@@ -26,7 +30,6 @@
     <div id="target-6">Popover 6</div>
     <div id="target-7">Popover 7</div>
   </div>
-
 
   <div id="contents" style="display: none;">
     <div id="content-1">
